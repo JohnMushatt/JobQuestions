@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp
+stdexcept
+-
+iostream
+-
+sstream
+-
+myMatrix.h
+/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.h
+
+/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.h
+memory
+-
+vector
+-
+exception
+-
+
+/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/main.cpp
+iostream
+-
+MatrixLib/myMatrix.h
+/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.h
+MatrixLib/myMatrix.cpp
+/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp
+memory
+-
+
