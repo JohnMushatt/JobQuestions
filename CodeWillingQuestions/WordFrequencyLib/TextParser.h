@@ -28,10 +28,8 @@ public:
     string getMostCommonWord();
 
 private:
-    string most_common_word;
     std::unordered_map<string, int> frequencies;
 
-    void findFrequencies();
 
 
 };

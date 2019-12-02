@@ -59,6 +59,14 @@ int main(int argc, char **argv) {
     myMatrix<double> TbT_res = TbT_one * TbT_two;
     TbT_res.printMatrix();
 
+    std::cout << "Testing multiplication between 1 matrix and a scalar value of 2" << std::endl;
+    // 2x2 matrix of ints
+    std::vector<std::vector<int>> scalar_mult{{1, 2},
+                                            {4, 2}};
+    myMatrix<int> mat_scalar_mult = myMatrix<int>(2, 2, scalar_mult);
+    mat_scalar_mult.printMatrix();
+    myMatrix<int> scalar_result = mat_scalar_mult * 2;
+    scalar_result.printMatrix();
     std::cout
             << "Testing non-member \"-\" functionality, result should be a 2x2 matrix of zeros\nas the multiplied_mat - multiplied_mat = 0"
             << std::endl;

@@ -22,7 +22,7 @@ myMatrix<T>::myMatrix(const unsigned int rows, const unsigned int col, vector<ve
         throw std::invalid_argument("Dimensions of data do not work with the rows and columns provided");
     }
     if (checkRows(rows, col, data)) {
-        throw std::invalid_argument("Dimensions of data and rows or columns");
+        throw std::invalid_argument("Dimensions of data and rows or columns are invalid");
     }
     this->rows = rows;
     this->columns = col;
@@ -41,6 +41,10 @@ myMatrix<T>::myMatrix(const unsigned int rows, const unsigned int col, vector<ve
     }
 }
 
+/**
+ * Print the matrix stored in data
+ * @tparam T Type of data stored in data
+ */
 template<class T>
 void myMatrix<T>::printMatrix() {
     std::cout << std::endl;
@@ -52,9 +56,15 @@ void myMatrix<T>::printMatrix() {
         }
         std::cout << current_row.str() << std::endl;
     }
-    std::cout<<std::endl;
+    std::cout << std::endl;
 }
 
+/**
+ * Multiply 2 matrices together
+ * @tparam T Type of data
+ * @param other_matrix Other matrix to multiple a.k.a right hand sside
+ * @return A new matrix containing the dot product of the 2 matrices
+ */
 template<class T>
 myMatrix<T> myMatrix<T>::operator*(myMatrix<T> &other_matrix) const {
     //First check to make sure THIS matrix and other_matrix are equal dimension
@@ -73,6 +83,22 @@ myMatrix<T> myMatrix<T>::operator*(myMatrix<T> &other_matrix) const {
                 T product = this_element * other_element;
                 data.at(i).at(j) += product;
             }
+        }
+
+
+    }
+    myMatrix<T> newMat = myMatrix<T>(this->rows, this->columns, data);
+    return newMat;
+}
+
+template<class T>
+myMatrix<T> myMatrix<T>::operator*(T scalar) const {
+    vector<vector<T>> data(this->rows, vector<T>(this->columns));
+
+    for (size_t i = 0; i < this->data.size(); i++) {
+        for (size_t j = 0; j < this->data.at(i).size(); j++) {
+
+            data.at(i).at(j) = this->data.at(i).at(j) * scalar;
         }
 
 

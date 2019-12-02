@@ -36,7 +36,7 @@ public:
     void operator+=(myMatrix<T> &other_mat);
 
     myMatrix<T> operator*(myMatrix<T> &other_matrix) const;
-
+    myMatrix<T> operator*(T scalar) const;
     static bool checkRows(const unsigned int rows, const unsigned int columns, const vector<vector<T>> data) {
         unsigned int row_count = 0;
 
