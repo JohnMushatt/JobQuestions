@@ -1,0 +1,1 @@
+add_library(WordFreq_Core  TextParser.cpp TextParser.h)

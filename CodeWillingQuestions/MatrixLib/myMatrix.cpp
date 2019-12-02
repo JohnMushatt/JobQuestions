@@ -47,27 +47,27 @@ void myMatrix<T>::printMatrix() {
     for (size_t i = 0; i < this->data.size(); i++) {
         std::stringstream current_row;
         for (size_t j = 0; j < this->data.at(i).size(); j++) {
-            current_row << data.at(i).at(j) << " ";
+            current_row << data.at(i).at(j) << "\t";
 
         }
         std::cout << current_row.str() << std::endl;
     }
+    std::cout<<std::endl;
 }
 
 template<class T>
-myMatrix<T> myMatrix<T>::operator*(myMatrix<T> other_matrix) const {
+myMatrix<T> myMatrix<T>::operator*(myMatrix<T> &other_matrix) const {
     //First check to make sure THIS matrix and other_matrix are equal dimension
     if (this->columns != other_matrix.rows) {
         throw std::invalid_argument("# of columns on left hand side does not equal # of rows on the right hand side");
     }
     //Create temporary 2d matrix
     vector<vector<T>> data(this->rows, vector<T>(other_matrix.columns));
-    int col_count = 0;
-    bool complete = false;
-    for (size_t i = 0; i < this->data.size(); i++) {
-        for(size_t j = 0; j < this->data.at(i).size();j++) {
 
-            for(size_t row = 0; row <other_matrix.data.size();row++) {
+    for (size_t i = 0; i < this->data.size(); i++) {
+        for (size_t j = 0; j < this->data.at(i).size(); j++) {
+
+            for (size_t row = 0; row < other_matrix.data.size(); row++) {
                 T this_element = this->data.at(i).at(row);
                 T other_element = other_matrix.data.at(row).at(j);
                 T product = this_element * other_element;
@@ -82,13 +82,13 @@ myMatrix<T> myMatrix<T>::operator*(myMatrix<T> other_matrix) const {
 }
 
 /**
- * Scalar value version of the member function overload +
- * @tparam T Class type of scalar value to add to the matrix
- * @param val Scalar value to add to the matrix
+ * Vector value version of the member function overload +
+ * @tparam T Class type of vector value to add to the matrix
+ * @param val Vector value to add to the matrix
  * @return matrix that has been modified by val
  */
 template<class T>
-myMatrix<T> myMatrix<T>::operator+(myMatrix<T> other_matrix) const {
+myMatrix<T> myMatrix<T>::operator+(myMatrix<T> &other_matrix) const {
     //First check to make sure THIS matrix and other_matrix are equal dimension
     if (this->rows != other_matrix.rows && this->columns != other_matrix.columns) {
         throw std::invalid_argument("Right hand matrix does not have the same dimensions as left hand matrix");
@@ -106,7 +106,7 @@ myMatrix<T> myMatrix<T>::operator+(myMatrix<T> other_matrix) const {
 }
 
 template<class T>
-void myMatrix<T>::operator+=(myMatrix<T> other_matrix) {
+void myMatrix<T>::operator+=(myMatrix<T> &other_matrix) {
     //First check to make sure THIS matrix and other_matrix are equal dimension
     if (this->rows != other_matrix.rows && this->columns != other_matrix.columns) {
         throw std::invalid_argument("Right hand matrix does not have the same dimensions as left hand matrix");
@@ -115,5 +115,25 @@ void myMatrix<T>::operator+=(myMatrix<T> other_matrix) {
         for (size_t j = 0; j < this->data.at(i).size(); j++) {
             this->data.at(i).at(j) = this->data.at(i).at(j) + other_matrix.data.at(i).at(j);
         }
+    }
+}
+
+template<class T>
+
+myMatrix<T> operator-(myMatrix<T> &lhs, myMatrix<T> &rhs) {
+    if (lhs.rows != rhs.rows || lhs.columns != rhs.columns) {
+        throw std::invalid_argument("Right hand side or left hand side are invalid matrices");
+    } else {
+        vector<vector<T>> data(lhs.rows, vector<T>(lhs.columns));
+
+        for (unsigned int i = 0; i < lhs.rows; i++) {
+            for (unsigned int j = 0; j < lhs.columns; j++) {
+
+                data.at(i).at(j) = lhs.data.at(i).at(j) - rhs.data.at(i).at(j);
+            }
+        }
+
+        myMatrix<T> new_mat = myMatrix<T>(lhs.rows, lhs.columns, data);
+        return new_mat;
     }
 }

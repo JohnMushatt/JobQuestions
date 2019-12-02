@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /snap/clion/97/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /snap/clion/97/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions
+CMAKE_SOURCE_DIR = /home/john/Desktop/JobQuestions/CodeWillingQuestions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug
+CMAKE_BINARY_DIR = /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cm
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/97/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/97/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib/CMakeFiles/progress.marks
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib/CMakeFiles/progress.marks
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/clean
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/preinstall
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/preinstall
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 MatrixLib/CMakeFiles/Matrix_Core.dir/rule:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/CMakeFiles/Matrix_Core.dir/rule
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 MatrixLib/CMakeFiles/Matrix_Core.dir/rule
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ Matrix_Core: MatrixLib/CMakeFiles/Matrix_Core.dir/rule
 
 # fast build rule for target.
 Matrix_Core/fast:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/build
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/build
 .PHONY : Matrix_Core/fast
 
 myMatrix.o: myMatrix.cpp.o
@@ -131,7 +131,7 @@ myMatrix.o: myMatrix.cpp.o
 
 # target to build an object file
 myMatrix.cpp.o:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o
 .PHONY : myMatrix.cpp.o
 
 myMatrix.i: myMatrix.cpp.i
@@ -140,7 +140,7 @@ myMatrix.i: myMatrix.cpp.i
 
 # target to preprocess a source file
 myMatrix.cpp.i:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.i
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.i
 .PHONY : myMatrix.cpp.i
 
 myMatrix.s: myMatrix.cpp.s
@@ -149,7 +149,7 @@ myMatrix.s: myMatrix.cpp.s
 
 # target to generate assembly for a file
 myMatrix.cpp.s:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.s
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.s
 .PHONY : myMatrix.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

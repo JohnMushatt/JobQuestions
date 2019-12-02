@@ -3,5 +3,6 @@
 
 CMakeFiles/CodeWillingQuestions.dir/main.cpp.o: ../MatrixLib/myMatrix.cpp
 CMakeFiles/CodeWillingQuestions.dir/main.cpp.o: ../MatrixLib/myMatrix.h
+CMakeFiles/CodeWillingQuestions.dir/main.cpp.o: ../WordFrequencyLib/TextParser.h
 CMakeFiles/CodeWillingQuestions.dir/main.cpp.o: ../main.cpp
 

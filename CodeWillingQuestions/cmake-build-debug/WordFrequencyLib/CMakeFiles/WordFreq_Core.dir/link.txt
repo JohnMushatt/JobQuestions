@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWordFreq_Core.a  CMakeFiles/WordFreq_Core.dir/TextParser.cpp.o
+/usr/bin/ranlib libWordFreq_Core.a

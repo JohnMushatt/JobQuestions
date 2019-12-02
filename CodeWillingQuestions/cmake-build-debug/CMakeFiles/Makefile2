@@ -35,19 +35,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /snap/clion/97/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /snap/clion/97/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions
+CMAKE_SOURCE_DIR = /home/john/Desktop/JobQuestions/CodeWillingQuestions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug
+CMAKE_BINARY_DIR = /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -55,17 +55,20 @@ CMAKE_BINARY_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cm
 # The main recursive "all" target.
 all: CMakeFiles/CodeWillingQuestions.dir/all
 all: MatrixLib/all
+all: WordFrequencyLib/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/CodeWillingQuestions.dir/clean
 clean: MatrixLib/clean
+clean: WordFrequencyLib/clean
 
 .PHONY : clean
 
 # The main recursive "preinstall" target.
 preinstall: MatrixLib/preinstall
+preinstall: WordFrequencyLib/preinstall
 
 .PHONY : preinstall
 
@@ -74,16 +77,17 @@ preinstall: MatrixLib/preinstall
 
 # All Build rule for target.
 CMakeFiles/CodeWillingQuestions.dir/all: MatrixLib/CMakeFiles/Matrix_Core.dir/all
+CMakeFiles/CodeWillingQuestions.dir/all: WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/all
 	$(MAKE) -f CMakeFiles/CodeWillingQuestions.dir/build.make CMakeFiles/CodeWillingQuestions.dir/depend
 	$(MAKE) -f CMakeFiles/CodeWillingQuestions.dir/build.make CMakeFiles/CodeWillingQuestions.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target CodeWillingQuestions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target CodeWillingQuestions"
 .PHONY : CMakeFiles/CodeWillingQuestions.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CodeWillingQuestions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CodeWillingQuestions.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/CodeWillingQuestions.dir/rule
 
 # Convenience name for target.
@@ -121,14 +125,14 @@ MatrixLib/preinstall:
 MatrixLib/CMakeFiles/Matrix_Core.dir/all:
 	$(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/depend
 	$(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Matrix_Core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Matrix_Core"
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/all
 
 # Build rule for subdir invocation for target.
 MatrixLib/CMakeFiles/Matrix_Core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MatrixLib/CMakeFiles/Matrix_Core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/rule
 
 # Convenience name for target.
@@ -140,6 +144,51 @@ Matrix_Core: MatrixLib/CMakeFiles/Matrix_Core.dir/rule
 MatrixLib/CMakeFiles/Matrix_Core.dir/clean:
 	$(MAKE) -f MatrixLib/CMakeFiles/Matrix_Core.dir/build.make MatrixLib/CMakeFiles/Matrix_Core.dir/clean
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/clean
+
+#=============================================================================
+# Directory level rules for directory WordFrequencyLib
+
+# Recursive "all" directory target.
+WordFrequencyLib/all: WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/all
+
+.PHONY : WordFrequencyLib/all
+
+# Recursive "clean" directory target.
+WordFrequencyLib/clean: WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/clean
+
+.PHONY : WordFrequencyLib/clean
+
+# Recursive "preinstall" directory target.
+WordFrequencyLib/preinstall:
+
+.PHONY : WordFrequencyLib/preinstall
+
+#=============================================================================
+# Target rules for target WordFrequencyLib/CMakeFiles/WordFreq_Core.dir
+
+# All Build rule for target.
+WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/all:
+	$(MAKE) -f WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/build.make WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/depend
+	$(MAKE) -f WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/build.make WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target WordFreq_Core"
+.PHONY : WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/all
+
+# Build rule for subdir invocation for target.
+WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles 0
+.PHONY : WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/rule
+
+# Convenience name for target.
+WordFreq_Core: WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/rule
+
+.PHONY : WordFreq_Core
+
+# clean rule for target.
+WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/clean:
+	$(MAKE) -f WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/build.make WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/clean
+.PHONY : WordFrequencyLib/CMakeFiles/WordFreq_Core.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

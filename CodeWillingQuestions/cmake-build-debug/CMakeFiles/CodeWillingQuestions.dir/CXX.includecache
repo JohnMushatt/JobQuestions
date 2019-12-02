@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.cpp
 stdexcept
 -
 iostream
@@ -14,9 +14,9 @@ iostream
 sstream
 -
 myMatrix.h
-/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.h
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.h
 
-/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.h
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.h
 memory
 -
 vector
@@ -24,13 +24,31 @@ vector
 exception
 -
 
-/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/main.cpp
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/WordFrequencyLib/TextParser.h
+fstream
+-
+string
+-
+exception
+-
+iostream
+-
+sstream
+-
+hash_map
+-
+unordered_map
+-
+
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/main.cpp
 iostream
 -
 MatrixLib/myMatrix.h
-/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.h
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.h
 MatrixLib/myMatrix.cpp
-/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.cpp
+WordFrequencyLib/TextParser.h
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/WordFrequencyLib/TextParser.h
 memory
 -
 

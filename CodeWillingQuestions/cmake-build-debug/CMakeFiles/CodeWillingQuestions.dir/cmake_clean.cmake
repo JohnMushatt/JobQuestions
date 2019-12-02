@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CodeWillingQuestions.dir/main.cpp.o"
-  "CodeWillingQuestions.exe"
+  "CodeWillingQuestions"
   "CodeWillingQuestions.pdb"
-  "libCodeWillingQuestions.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

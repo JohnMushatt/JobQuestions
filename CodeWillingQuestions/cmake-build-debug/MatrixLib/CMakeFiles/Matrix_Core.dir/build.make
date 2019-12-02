@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /snap/clion/97/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/johnm/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /snap/clion/97/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions
+CMAKE_SOURCE_DIR = /home/john/Desktop/JobQuestions/CodeWillingQuestions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug
+CMAKE_BINARY_DIR = /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include MatrixLib/CMakeFiles/Matrix_Core.dir/depend.make
@@ -59,16 +59,16 @@ include MatrixLib/CMakeFiles/Matrix_Core.dir/flags.make
 
 MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o: MatrixLib/CMakeFiles/Matrix_Core.dir/flags.make
 MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o: ../MatrixLib/myMatrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o"
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib && /usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o -c /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o"
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o -c /home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.cpp
 
 MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Matrix_Core.dir/myMatrix.cpp.i"
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp > CMakeFiles/Matrix_Core.dir/myMatrix.cpp.i
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.cpp > CMakeFiles/Matrix_Core.dir/myMatrix.cpp.i
 
 MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matrix_Core.dir/myMatrix.cpp.s"
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib/myMatrix.cpp -o CMakeFiles/Matrix_Core.dir/myMatrix.cpp.s
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib/myMatrix.cpp -o CMakeFiles/Matrix_Core.dir/myMatrix.cpp.s
 
 # Object files for target Matrix_Core
 Matrix_Core_OBJECTS = \
@@ -80,9 +80,9 @@ Matrix_Core_EXTERNAL_OBJECTS =
 MatrixLib/libMatrix_Core.a: MatrixLib/CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o
 MatrixLib/libMatrix_Core.a: MatrixLib/CMakeFiles/Matrix_Core.dir/build.make
 MatrixLib/libMatrix_Core.a: MatrixLib/CMakeFiles/Matrix_Core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMatrix_Core.a"
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib && $(CMAKE_COMMAND) -P CMakeFiles/Matrix_Core.dir/cmake_clean_target.cmake
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Matrix_Core.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMatrix_Core.a"
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib && $(CMAKE_COMMAND) -P CMakeFiles/Matrix_Core.dir/cmake_clean_target.cmake
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Matrix_Core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 MatrixLib/CMakeFiles/Matrix_Core.dir/build: MatrixLib/libMatrix_Core.a
@@ -90,10 +90,10 @@ MatrixLib/CMakeFiles/Matrix_Core.dir/build: MatrixLib/libMatrix_Core.a
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/build
 
 MatrixLib/CMakeFiles/Matrix_Core.dir/clean:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib && $(CMAKE_COMMAND) -P CMakeFiles/Matrix_Core.dir/cmake_clean.cmake
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib && $(CMAKE_COMMAND) -P CMakeFiles/Matrix_Core.dir/cmake_clean.cmake
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/clean
 
 MatrixLib/CMakeFiles/Matrix_Core.dir/depend:
-	cd /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/MatrixLib /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib /cygdrive/c/Users/johnm/CLionProjects/CodeWillingQuestions/cmake-build-debug/MatrixLib/CMakeFiles/Matrix_Core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/john/Desktop/JobQuestions/CodeWillingQuestions /home/john/Desktop/JobQuestions/CodeWillingQuestions/MatrixLib /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib /home/john/Desktop/JobQuestions/CodeWillingQuestions/cmake-build-debug/MatrixLib/CMakeFiles/Matrix_Core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : MatrixLib/CMakeFiles/Matrix_Core.dir/depend
 

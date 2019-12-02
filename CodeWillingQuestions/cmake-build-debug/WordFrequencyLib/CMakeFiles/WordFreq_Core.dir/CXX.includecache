@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/WordFrequencyLib/TextParser.cpp
+TextParser.h
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/WordFrequencyLib/TextParser.h
+
+/home/john/Desktop/JobQuestions/CodeWillingQuestions/WordFrequencyLib/TextParser.h
+fstream
+-
+string
+-
+exception
+-
+iostream
+-
+sstream
+-
+unordered_map
+-
+

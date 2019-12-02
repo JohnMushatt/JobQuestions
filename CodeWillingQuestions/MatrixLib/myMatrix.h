@@ -6,8 +6,10 @@
 #define CODEWILLINGQUESTIONS_MYMATRIX_H
 
 #include <memory>
+
 using std::shared_ptr;
 using std::make_shared;
+
 #include <vector>
 
 using std::vector;
@@ -19,42 +21,46 @@ using std::exception;
 template<class T>
 class myMatrix {
 public:
-
+    unsigned int size;
+    unsigned int columns;
+    unsigned int rows;
+    vector<vector<T>> data;
     myMatrix(const unsigned int rows, const unsigned int col, const vector<vector<T>> data);
 
     myMatrix();
 
     void printMatrix();
-    myMatrix<T> operator+(myMatrix<T> other_matrix) const;
-    void operator+=(myMatrix<T> other_mat);
-    myMatrix<T> operator*(myMatrix<T> other_matrix) const;
-private:
-    unsigned int size;
-    unsigned int columns;
-    unsigned int rows;
-    vector<vector<T>> data;
+
+    myMatrix<T> operator+(myMatrix<T> &other_matrix) const;
+
+    void operator+=(myMatrix<T> &other_mat);
+
+    myMatrix<T> operator*(myMatrix<T> &other_matrix) const;
 
     static bool checkRows(const unsigned int rows, const unsigned int columns, const vector<vector<T>> data) {
         unsigned int row_count = 0;
-        unsigned int col_count =0;
-        for(size_t i = 0; i < data.size();i++) {
+
+        unsigned int col_count = 0;
+        for (size_t i = 0; i < data.size(); i++) {
             row_count++;
-            for(size_t j = 0; j < data.at(i).size();j++) {
+            for (size_t j = 0; j < data.at(i).size(); j++) {
                 col_count++;
             }
         }
         //If the rows or columns of data are bigger than what was specified
-        if(row_count > rows || col_count > columns) {
+        if (row_count > rows || col_count > columns) {
             return false;
         }
             //If the rows or columns of data are smaller than what was specified
-        else if(row_count< rows || col_count < columns) {
+        else if (row_count < rows || col_count < columns) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }
 };
+
+template<class T>
+myMatrix<T> operator-(myMatrix<T> &lhs, myMatrix<T> &rhs);
 
 #endif //CODEWILLINGQUESTIONS_MYMATRIX_H

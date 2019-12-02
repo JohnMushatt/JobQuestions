@@ -1,2 +1,2 @@
-/usr/bin/ar.exe qc libMatrix_Core.a  CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o
-/usr/bin/ranlib.exe libMatrix_Core.a
+/usr/bin/ar qc libMatrix_Core.a  CMakeFiles/Matrix_Core.dir/myMatrix.cpp.o
+/usr/bin/ranlib libMatrix_Core.a
