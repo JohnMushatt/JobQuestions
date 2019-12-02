@@ -90,7 +90,12 @@ myMatrix<T> myMatrix<T>::operator*(myMatrix<T> &other_matrix) const {
     myMatrix<T> newMat = myMatrix<T>(this->rows, this->columns, data);
     return newMat;
 }
-
+/**
+ * Scalar version of matrix multiplication
+ * @tparam T Data type of matrix
+ * @param scalar Value to multiply matrix by
+ * @return A new matrix containg the product of the matrix and scalar
+ */
 template<class T>
 myMatrix<T> myMatrix<T>::operator*(T scalar) const {
     vector<vector<T>> data(this->rows, vector<T>(this->columns));
@@ -130,7 +135,11 @@ myMatrix<T> myMatrix<T>::operator+(myMatrix<T> &other_matrix) const {
     myMatrix<T> newMat = myMatrix<T>(this->rows, this->columns, data);
     return newMat;
 }
-
+/**
+ * The += operator overload
+ * @tparam T Type of data in matrix
+ * @param other_matrix Reference to matrix to add to itself
+ */
 template<class T>
 void myMatrix<T>::operator+=(myMatrix<T> &other_matrix) {
     //First check to make sure THIS matrix and other_matrix are equal dimension
@@ -143,9 +152,14 @@ void myMatrix<T>::operator+=(myMatrix<T> &other_matrix) {
         }
     }
 }
-
+/**
+ * The - operator
+ * @tparam T Type of data stored in matrix
+ * @param lhs Left hand side matrix
+ * @param rhs Right hand side matrix
+ * @return A new matrix with the difference between lhs and rhs
+ */
 template<class T>
-
 myMatrix<T> operator-(myMatrix<T> &lhs, myMatrix<T> &rhs) {
     if (lhs.rows != rhs.rows || lhs.columns != rhs.columns) {
         throw std::invalid_argument("Right hand side or left hand side are invalid matrices");
