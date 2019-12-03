@@ -1,7 +1,7 @@
 #include <iostream>
-#include "MatrixLib/myMatrix.h"
-#include "MatrixLib/myMatrix.cpp"
-#include "WordFrequencyLib/TextParser.h"
+#include "myMatrix.h"
+#include "myMatrix.cpp"
+#include "../WordFrequencyLib/TextParser.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -73,8 +73,6 @@ int main(int argc, char **argv) {
     myMatrix<int> zero_mat = multiplied_mat - multiplied_mat;
     zero_mat.printMatrix();
 
-    std::cout << "Testing word frequency program with file: "<<argv[1] << std::endl;
-    shared_ptr<TextParser> parser = make_shared<TextParser>(string(argv[1]));
 
     return 0;
 }
